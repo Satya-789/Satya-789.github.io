@@ -3,50 +3,116 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Satya Prakash Mohanty - Data Scientist, Machine Learning Engineer and AI enthusiast specializing in Machine Learning, Deep Learning, NLP and Generative AI."
+    >
+
+    <meta
+        name="keywords"
+        content="Satya Prakash Mohanty, Data Scientist, Machine Learning, AI, Python, Deep Learning, NLP"
+    >
+
+    <meta name="author" content="Satya Prakash Mohanty">
+
+    <meta name="theme-color" content="#0a0f1c">
 
     <title>Satya Prakash Mohanty | Data Scientist & ML Engineer</title>
 
-    <meta name="description"
-          content="Satya Prakash Mohanty - Data Scientist, Machine Learning Engineer and AI enthusiast specializing in Machine Learning, Deep Learning, NLP and Generative AI.">
-
-    <meta name="keywords"
-          content="Satya Prakash Mohanty, Data Scientist, Machine Learning, AI, Python, Deep Learning, NLP">
-
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap"
-          rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
 
     <style>
+        /* =========================================================
+           ROOT VARIABLES
+        ========================================================= */
+
         :root {
             --bg: #0a0f1c;
             --bg-secondary: #111827;
             --card: rgba(17, 24, 39, 0.75);
+
             --text: #f8fafc;
+            --text-secondary: #cbd5e1;
             --muted: #94a3b8;
+
             --primary: #60a5fa;
             --secondary: #a78bfa;
-            --border: rgba(255,255,255,0.08);
-            --gradient: linear-gradient(135deg, #60a5fa, #a78bfa);
+
+            --border: rgba(255, 255, 255, 0.08);
+
+            --gradient:
+                linear-gradient(
+                    135deg,
+                    var(--primary),
+                    var(--secondary)
+                );
+
+            --container: 1120px;
+            --nav-height: 72px;
+
+            --radius-sm: 10px;
+            --radius-md: 18px;
+            --radius-lg: 50px;
+
+            --transition: 0.3s ease;
         }
 
-        * {
+
+        /* =========================================================
+           RESET
+        ========================================================= */
+
+        *,
+        *::before,
+        *::after {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+
+        html {
             scroll-behavior: smooth;
+            scroll-padding-top: var(--nav-height);
         }
 
         body {
+            min-height: 100vh;
+
             font-family: "Inter", sans-serif;
+
             background:
-                radial-gradient(circle at 10% 10%, rgba(96,165,250,.12), transparent 30%),
-                radial-gradient(circle at 90% 20%, rgba(167,139,250,.12), transparent 30%),
+                radial-gradient(
+                    circle at 10% 10%,
+                    rgba(96, 165, 250, 0.12),
+                    transparent 30%
+                ),
+                radial-gradient(
+                    circle at 90% 20%,
+                    rgba(167, 139, 250, 0.12),
+                    transparent 30%
+                ),
                 var(--bg);
+
             color: var(--text);
             line-height: 1.7;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
         }
 
         a {
@@ -54,32 +120,61 @@
             text-decoration: none;
         }
 
-        .container {
-            width: min(1120px, 90%);
-            margin: auto;
+        ul {
+            list-style-position: outside;
         }
 
-        /* ================= NAVBAR ================= */
+        button,
+        a {
+            -webkit-tap-highlight-color: transparent;
+        }
+
+
+        /* =========================================================
+           UTILITY
+        ========================================================= */
+
+        .container {
+            width: min(var(--container), 90%);
+            margin-inline: auto;
+        }
+
+        .gradient-text {
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+
+        /* =========================================================
+           NAVBAR
+        ========================================================= */
 
         nav {
             position: fixed;
-            width: 100%;
-            top: 0;
+            inset: 0 0 auto;
             z-index: 1000;
-            backdrop-filter: blur(15px);
-            background: rgba(10,15,28,.75);
+
+            height: var(--nav-height);
+
+            background: rgba(10, 15, 28, 0.78);
             border-bottom: 1px solid var(--border);
+
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
         }
 
         .nav-container {
-            height: 72px;
+            height: 100%;
+
             display: flex;
-            justify-content: space-between;
             align-items: center;
+            justify-content: space-between;
         }
 
         .logo {
-            font-family: "Poppins";
+            font-family: "Poppins", sans-serif;
             font-size: 1.35rem;
             font-weight: 800;
         }
@@ -90,110 +185,151 @@
 
         .nav-links {
             display: flex;
+            align-items: center;
             gap: 28px;
+
             list-style: none;
         }
 
         .nav-links a {
-            color: #cbd5e1;
-            font-size: .92rem;
-            transition: .3s;
+            color: var(--text-secondary);
+            font-size: 0.92rem;
+
+            transition: color var(--transition);
         }
 
-        .nav-links a:hover {
+        .nav-links a:hover,
+        .nav-links a:focus-visible {
             color: var(--primary);
         }
 
         .menu-btn {
             display: none;
-            font-size: 1.5rem;
+
+            border: 0;
+            background: transparent;
+            color: var(--text);
+
+            font-size: 1.6rem;
             cursor: pointer;
         }
 
-        /* ================= HERO ================= */
+
+        /* =========================================================
+           HERO
+        ========================================================= */
 
         .hero {
             min-height: 100vh;
+
             display: flex;
             align-items: center;
-            padding-top: 80px;
+
+            padding-top: calc(var(--nav-height) + 20px);
         }
 
         .hero-grid {
             display: grid;
-            grid-template-columns: 1.3fr .7fr;
+            grid-template-columns: 1.3fr 0.7fr;
             align-items: center;
+
             gap: 60px;
         }
 
         .badge {
             display: inline-block;
+
             padding: 7px 15px;
-            border: 1px solid rgba(96,165,250,.3);
-            border-radius: 50px;
-            background: rgba(96,165,250,.08);
-            color: var(--primary);
-            font-size: .85rem;
             margin-bottom: 22px;
+
+            border: 1px solid rgba(96, 165, 250, 0.3);
+            border-radius: var(--radius-lg);
+
+            background: rgba(96, 165, 250, 0.08);
+            color: var(--primary);
+
+            font-size: 0.85rem;
         }
 
         .hero h1 {
-            font-family: "Poppins";
+            margin-bottom: 20px;
+
+            font-family: "Poppins", sans-serif;
             font-size: clamp(2.8rem, 6vw, 5rem);
             line-height: 1.08;
-            margin-bottom: 20px;
-        }
-
-        .gradient-text {
-            background: var(--gradient);
-            -webkit-background-clip: text;
-            color: transparent;
         }
 
         .hero h2 {
-            font-size: 1.4rem;
-            color: #cbd5e1;
             margin-bottom: 18px;
+
+            color: var(--text-secondary);
+            font-size: 1.4rem;
         }
 
         .hero p {
-            color: var(--muted);
             max-width: 650px;
-            font-size: 1.05rem;
             margin-bottom: 30px;
+
+            color: var(--muted);
+            font-size: 1.05rem;
         }
 
         .buttons {
             display: flex;
-            gap: 15px;
             flex-wrap: wrap;
+            gap: 15px;
         }
+
+
+        /* =========================================================
+           BUTTONS
+        ========================================================= */
 
         .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
             padding: 12px 22px;
-            border-radius: 10px;
-            font-weight: 600;
+
             border: 1px solid var(--border);
-            transition: .3s;
-            display: inline-block;
+            border-radius: var(--radius-sm);
+
+            font-weight: 600;
+
+            transition:
+                transform var(--transition),
+                border-color var(--transition),
+                color var(--transition),
+                background var(--transition);
         }
 
-        .btn-primary {
-            background: var(--gradient);
-            color: white;
-            border: none;
-        }
-
-        .btn:hover {
+        .btn:hover,
+        .btn:focus-visible {
             transform: translateY(-3px);
         }
 
-        .btn-outline:hover {
+        .btn-primary {
+            border: 0;
+            background: var(--gradient);
+            color: white;
+        }
+
+        .btn-outline:hover,
+        .btn-outline:focus-visible {
             border-color: var(--primary);
             color: var(--primary);
         }
 
-        /* PROFILE */
+        .btn-small {
+            padding: 8px 14px;
+            font-size: 0.85rem;
+        }
+
+
+        /* =========================================================
+           PROFILE
+        ========================================================= */
 
         .profile-wrapper {
             display: flex;
@@ -203,69 +339,100 @@
         .profile-card {
             width: 310px;
             height: 310px;
-            border-radius: 50%;
+
             padding: 7px;
+
+            border-radius: 50%;
             background: var(--gradient);
-            box-shadow: 0 0 70px rgba(96,165,250,.2);
+
+            box-shadow:
+                0 0 70px rgba(96, 165, 250, 0.2);
         }
 
         .profile-card img {
             width: 100%;
             height: 100%;
+
             object-fit: cover;
-            border-radius: 50%;
+
             border: 7px solid var(--bg);
+            border-radius: 50%;
         }
 
-        /* ================= SECTION ================= */
+
+        /* =========================================================
+           SECTIONS
+        ========================================================= */
 
         section {
             padding: 100px 0;
         }
 
         .section-title {
-            text-align: center;
             margin-bottom: 55px;
+            text-align: center;
         }
 
         .section-title h2 {
-            font-family: "Poppins";
-            font-size: 2.4rem;
             margin-bottom: 10px;
+
+            font-family: "Poppins", sans-serif;
+            font-size: 2.4rem;
         }
 
         .section-title p {
             color: var(--muted);
         }
 
-        /* ================= ABOUT ================= */
 
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-        }
+        /* =========================================================
+           CARDS
+        ========================================================= */
 
         .card {
+            padding: 30px;
+
             background: var(--card);
             border: 1px solid var(--border);
-            border-radius: 18px;
-            padding: 30px;
+            border-radius: var(--radius-md);
+
             backdrop-filter: blur(15px);
-            transition: .3s;
+            -webkit-backdrop-filter: blur(15px);
+
+            transition:
+                transform var(--transition),
+                border-color var(--transition);
         }
 
         .card:hover {
             transform: translateY(-5px);
-            border-color: rgba(96,165,250,.3);
+            border-color: rgba(96, 165, 250, 0.3);
         }
 
-        .card p {
-            color: var(--muted);
+
+        /* =========================================================
+           ABOUT
+        ========================================================= */
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .about-grid .card p {
             margin-bottom: 15px;
+            color: var(--muted);
         }
 
-        /* ================= SKILLS ================= */
+        .about-grid .card p:last-child {
+            margin-bottom: 0;
+        }
+
+
+        /* =========================================================
+           SKILLS
+        ========================================================= */
 
         .skills {
             display: flex;
@@ -276,22 +443,30 @@
 
         .skill {
             padding: 9px 15px;
-            background: rgba(255,255,255,.04);
+
+            background: rgba(255, 255, 255, 0.04);
             border: 1px solid var(--border);
             border-radius: 30px;
-            color: #cbd5e1;
-            font-size: .9rem;
-            transition: .3s;
+
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+
+            transition: var(--transition);
         }
 
         .skill:hover {
-            color: white;
-            background: rgba(96,165,250,.12);
-            border-color: var(--primary);
             transform: translateY(-2px);
+
+            background: rgba(96, 165, 250, 0.12);
+            border-color: var(--primary);
+
+            color: white;
         }
 
-        /* ================= PROJECTS ================= */
+
+        /* =========================================================
+           PROJECTS
+        ========================================================= */
 
         .projects-grid {
             display: grid;
@@ -307,7 +482,14 @@
         .project-image {
             width: 100%;
             height: 220px;
+
             object-fit: cover;
+
+            transition: transform 0.5s ease;
+        }
+
+        .project:hover .project-image {
+            transform: scale(1.03);
         }
 
         .project-content {
@@ -315,63 +497,115 @@
         }
 
         .project-content h3 {
-            font-family: "Poppins";
             margin-bottom: 8px;
+
+            font-family: "Poppins", sans-serif;
         }
 
         .project-content p {
-            color: var(--muted);
             margin-bottom: 15px;
+            color: var(--muted);
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+
+            margin-bottom: 18px;
         }
 
         .tag {
             display: inline-block;
+
             padding: 5px 10px;
+
             border-radius: 20px;
-            font-size: .78rem;
-            background: rgba(167,139,250,.12);
+
+            background: rgba(167, 139, 250, 0.12);
             color: #c4b5fd;
+
+            font-size: 0.78rem;
         }
 
-        /* ================= EXPERIENCE ================= */
+        .project-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+
+            color: var(--primary);
+            font-size: 0.9rem;
+            font-weight: 600;
+
+            transition: var(--transition);
+        }
+
+        .project-link:hover {
+            color: var(--secondary);
+            transform: translateX(3px);
+        }
+
+
+        /* =========================================================
+           EXPERIENCE
+        ========================================================= */
 
         .timeline {
             max-width: 850px;
-            margin: auto;
+            margin-inline: auto;
         }
 
         .experience {
             position: relative;
+
             margin-bottom: 30px;
             padding-left: 30px;
-            border-left: 2px solid rgba(96,165,250,.3);
+
+            border-left: 2px solid rgba(96, 165, 250, 0.3);
+        }
+
+        .experience:last-child {
+            margin-bottom: 0;
         }
 
         .experience::before {
             content: "";
+
             position: absolute;
+            top: 30px;
             left: -7px;
-            top: 5px;
+
             width: 12px;
             height: 12px;
+
             border-radius: 50%;
             background: var(--primary);
+
+            box-shadow: 0 0 15px rgba(96, 165, 250, 0.5);
         }
 
         .experience h3 {
-            font-family: "Poppins";
             margin-bottom: 4px;
+
+            font-family: "Poppins", sans-serif;
         }
 
-        .experience .company {
+        .company {
             color: var(--primary);
             font-weight: 600;
         }
 
-        .experience .date {
-            color: #64748b;
-            font-size: .9rem;
+        .date {
             margin-bottom: 12px;
+
+            color: #64748b;
+            font-size: 0.9rem;
         }
 
         .experience ul {
@@ -379,7 +613,14 @@
             color: var(--muted);
         }
 
-        /* ================= CERTIFICATES ================= */
+        .experience li {
+            margin-bottom: 7px;
+        }
+
+
+        /* =========================================================
+           CERTIFICATES
+        ========================================================= */
 
         .certificates {
             display: grid;
@@ -388,68 +629,99 @@
         }
 
         .certificate {
+            display: flex;
+            flex-direction: column;
             text-align: center;
         }
 
         .certificate h3 {
+            margin-bottom: 5px;
+
             font-size: 1rem;
-            margin-top: 10px;
         }
 
         .certificate p {
+            margin-bottom: 15px;
+
             color: var(--muted);
-            font-size: .85rem;
-            margin-top: 5px;
+            font-size: 0.85rem;
         }
 
-        /* ================= CONTACT ================= */
+        .certificate .btn {
+            margin-top: auto;
+            align-self: center;
+        }
+
+
+        /* =========================================================
+           CONTACT
+        ========================================================= */
 
         .contact-card {
-            text-align: center;
             max-width: 750px;
-            margin: auto;
+            margin-inline: auto;
+
+            text-align: center;
         }
 
         .contact-card p {
-            color: var(--muted);
+            max-width: 600px;
             margin: 15px auto 30px;
+
+            color: var(--muted);
         }
 
         .socials {
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
             gap: 15px;
-            flex-wrap: wrap;
         }
 
         .social {
             padding: 11px 18px;
+
             border: 1px solid var(--border);
-            border-radius: 10px;
-            transition: .3s;
+            border-radius: var(--radius-sm);
+
+            transition: var(--transition);
         }
 
-        .social:hover {
-            color: var(--primary);
+        .social:hover,
+        .social:focus-visible {
             border-color: var(--primary);
+            color: var(--primary);
+
+            transform: translateY(-2px);
         }
 
-        /* ================= FOOTER ================= */
+
+        /* =========================================================
+           FOOTER
+        ========================================================= */
 
         footer {
-            border-top: 1px solid var(--border);
-            text-align: center;
             padding: 30px;
+
+            border-top: 1px solid var(--border);
+
             color: #64748b;
-            font-size: .9rem;
+            font-size: 0.9rem;
+            text-align: center;
         }
 
-        /* ================= ANIMATION ================= */
+
+        /* =========================================================
+           SCROLL ANIMATION
+        ========================================================= */
 
         .fade-in {
             opacity: 0;
             transform: translateY(25px);
-            transition: 1s ease;
+
+            transition:
+                opacity 0.8s ease,
+                transform 0.8s ease;
         }
 
         .fade-in.visible {
@@ -457,50 +729,53 @@
             transform: translateY(0);
         }
 
-        /* ================= RESPONSIVE ================= */
-
-        @media(max-width: 800px) {
-
-            .nav-links {
-                position: absolute;
-                top: 72px;
-                left: 0;
-                width: 100%;
-                background: #0a0f1c;
-                flex-direction: column;
-                padding: 25px;
-                display: none;
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
             }
 
-            .nav-links.active {
-                display: flex;
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
             }
 
-            .menu-btn {
-                display: block;
+            .fade-in {
+                opacity: 1;
+                transform: none;
             }
+        }
+
+
+        /* =========================================================
+           RESPONSIVE
+        ========================================================= */
+
+        @media (max-width: 900px) {
 
             .hero-grid {
                 grid-template-columns: 1fr;
+                gap: 45px;
+
                 text-align: center;
             }
 
+            .hero-content {
+                order: 2;
+            }
+
+            .profile-wrapper {
+                order: 1;
+            }
+
             .hero p {
-                margin-left: auto;
-                margin-right: auto;
+                margin-inline: auto;
             }
 
             .buttons {
                 justify-content: center;
-            }
-
-            .profile-wrapper {
-                order: -1;
-            }
-
-            .profile-card {
-                width: 230px;
-                height: 230px;
             }
 
             .about-grid,
@@ -509,702 +784,1175 @@
             }
 
             .certificates {
-                grid-template-columns: 1fr;
+                grid-template-columns: repeat(2, 1fr);
             }
         }
 
-        @media(max-width: 500px) {
 
-            .hero h1 {
-                font-size: 2.5rem;
+        @media (max-width: 800px) {
+
+            .menu-btn {
+                display: block;
             }
 
+            .nav-links {
+                position: absolute;
+                top: var(--nav-height);
+                left: 0;
+
+                width: 100%;
+
+                display: none;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0;
+
+                padding: 20px 5%;
+
+                background: #0a0f1c;
+                border-bottom: 1px solid var(--border);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links li {
+                width: 100%;
+            }
+
+            .nav-links a {
+                display: block;
+                padding: 12px 0;
+            }
+        }
+
+
+        @media (max-width: 600px) {
+
             section {
-                padding: 70px 0;
+                padding: 75px 0;
+            }
+
+            .section-title {
+                margin-bottom: 40px;
             }
 
             .section-title h2 {
                 font-size: 2rem;
             }
+
+            .profile-card {
+                width: 230px;
+                height: 230px;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero h2 {
+                font-size: 1.15rem;
+            }
+
+            .hero p {
+                font-size: 0.95rem;
+            }
+
+            .certificates {
+                grid-template-columns: 1fr;
+            }
+
+            .card {
+                padding: 24px;
+            }
+
+            .project-image {
+                height: 200px;
+            }
+        }
+
+
+        @media (max-width: 400px) {
+
+            .buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .project-links {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
 
+
 <body>
 
-<!-- ================= NAVBAR ================= -->
+    <!-- =========================================================
+         NAVBAR
+    ========================================================= -->
 
-<nav>
-    <div class="container nav-container">
+    <nav aria-label="Main navigation">
 
-        <a href="#home" class="logo">
-            Satya<span>.</span>
-        </a>
+        <div class="container nav-container">
 
-        <div class="menu-btn" onclick="toggleMenu()">
-            ☰
-        </div>
+            <a href="#home" class="logo" aria-label="Satya home">
+                Satya<span>.</span>
+            </a>
 
-        <ul class="nav-links" id="navLinks">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#certificates">Certificates</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+            <button
+                class="menu-btn"
+                id="menuBtn"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="navLinks"
+            >
+                ☰
+            </button>
 
-    </div>
-</nav>
+            <ul class="nav-links" id="navLinks">
 
+                <li>
+                    <a href="#home">Home</a>
+                </li>
 
-<!-- ================= HERO ================= -->
+                <li>
+                    <a href="#about">About</a>
+                </li>
 
-<section class="hero" id="home">
+                <li>
+                    <a href="#skills">Skills</a>
+                </li>
 
-    <div class="container hero-grid">
+                <li>
+                    <a href="#projects">Projects</a>
+                </li>
 
-        <div class="hero-content fade-in">
+                <li>
+                    <a href="#experience">Experience</a>
+                </li>
 
-            <span class="badge">
-                👋 Open to Data Science & AI Opportunities
-            </span>
+                <li>
+                    <a href="#certificates">Certificates</a>
+                </li>
 
-            <h1>
-                Hi, I'm
-                <span class="gradient-text">
-                    Satya Prakash Mohanty
-                </span>
-            </h1>
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
 
-            <h2>
-                Data Scientist · Machine Learning Engineer · AI Enthusiast
-            </h2>
-
-            <p>
-                I transform complex datasets into actionable insights and
-                intelligent solutions that drive business growth, improve
-                decision-making, and solve real-world problems.
-            </p>
-
-            <div class="buttons">
-
-                <a href="#projects" class="btn btn-primary">
-                    View My Projects
-                </a>
-
-                <a href="mailto:satyaprakash.mohanty393@gmail.com"
-                   class="btn btn-outline">
-                    Contact Me
-                </a>
-
-                <a href="https://github.com/Satya-789"
-                   target="_blank"
-                   class="btn btn-outline">
-                    GitHub
-                </a>
-
-            </div>
+            </ul>
 
         </div>
 
-
-        <div class="profile-wrapper fade-in">
-
-            <div class="profile-card">
-
-                <img
-                    src="https://images.codebasics.io/filters:format(webp)/fit-in/600x600/uploads/learner-portfolio/profile-images/485353/6990d68a43d68/c5ceec9140.jpg"
-                    alt="Satya Prakash Mohanty">
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
+    </nav>
 
 
-<!-- ================= ABOUT ================= -->
+    <main>
 
-<section id="about">
+        <!-- =====================================================
+             HERO
+        ====================================================== -->
 
-    <div class="container">
+        <section class="hero" id="home">
 
-        <div class="section-title fade-in">
-            <h2>About Me</h2>
-            <p>Data, AI and technology enthusiast</p>
-        </div>
+            <div class="container hero-grid">
 
-        <div class="about-grid">
+                <div class="hero-content fade-in">
 
-            <div class="card fade-in">
+                    <span class="badge">
+                        👋 Open to Data Science & AI Opportunities
+                    </span>
 
-                <p>
-                    👨‍💻 Hi, I'm Satya Prakash Mohanty, a passionate Data
-                    Science Enthusiast, Machine Learning Engineer and
-                    Deep Learning Practitioner.
-                </p>
+                    <h1>
+                        Hi, I'm
+                        <span class="gradient-text">
+                            Satya Prakash Mohanty
+                        </span>
+                    </h1>
 
-                <p>
-                    🚀 I enjoy transforming raw and complex data into
-                    meaningful insights and developing machine learning
-                    models that solve real-world problems.
-                </p>
-
-            </div>
-
-            <div class="card fade-in">
-
-                <p>
-                    💡 My interests include Artificial Intelligence,
-                    Machine Learning, Deep Learning, Natural Language
-                    Processing and Generative AI.
-                </p>
-
-                <p>
-                    🎯 My goal is to leverage data and AI to create
-                    impactful solutions while continuously growing
-                    as a technology professional.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= SKILLS ================= -->
-
-<section id="skills">
-
-    <div class="container">
-
-        <div class="section-title fade-in">
-
-            <h2>Technical Skills</h2>
-
-            <p>
-                Technologies and concepts I work with
-            </p>
-
-        </div>
-
-        <div class="skills fade-in">
-
-            <span class="skill">Python</span>
-            <span class="skill">Pandas</span>
-            <span class="skill">NumPy</span>
-            <span class="skill">SQL</span>
-
-            <span class="skill">Scikit-learn</span>
-            <span class="skill">Machine Learning</span>
-            <span class="skill">Feature Engineering</span>
-            <span class="skill">Data Preprocessing</span>
-
-            <span class="skill">Regression</span>
-            <span class="skill">Classification</span>
-            <span class="skill">Decision Trees</span>
-            <span class="skill">Random Forest</span>
-            <span class="skill">SVM</span>
-            <span class="skill">KNN</span>
-            <span class="skill">Gradient Boosting</span>
-
-            <span class="skill">Clustering</span>
-            <span class="skill">K-Means</span>
-            <span class="skill">DBSCAN</span>
-            <span class="skill">PCA</span>
-
-            <span class="skill">Deep Learning</span>
-            <span class="skill">CNN</span>
-            <span class="skill">ResNet50</span>
-            <span class="skill">Transfer Learning</span>
-
-            <span class="skill">Computer Vision</span>
-            <span class="skill">TensorFlow</span>
-            <span class="skill">Keras</span>
-            <span class="skill">PyTorch</span>
-
-            <span class="skill">NLP</span>
-            <span class="skill">Generative AI</span>
-
-            <span class="skill">Time Series</span>
-            <span class="skill">ARIMA</span>
-            <span class="skill">ARIMAX</span>
-
-            <span class="skill">AUC</span>
-            <span class="skill">Precision</span>
-            <span class="skill">Recall</span>
-            <span class="skill">F1 Score</span>
-
-            <span class="skill">Matplotlib</span>
-            <span class="skill">Seaborn</span>
-            <span class="skill">Streamlit</span>
-            <span class="skill">GitHub</span>
-            <span class="skill">MySQL</span>
-
-            <span class="skill">Web Scraping</span>
-            <span class="skill">Requests</span>
-            <span class="skill">BeautifulSoup</span>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= PROJECTS ================= -->
-
-<section id="projects">
-
-    <div class="container">
-
-        <div class="section-title fade-in">
-
-            <h2>My Projects</h2>
-
-            <p>
-                Machine learning and data science projects
-            </p>
-
-        </div>
-
-
-        <div class="projects-grid">
-
-
-            <!-- Password -->
-
-            <div class="card project fade-in">
-
-                <img
-                    class="project-image"
-                    src="https://images.codebasics.io/filters:format(webp)/fit-in/600x600/uploads/learner-portfolio/projects/thumbnail/485353/6a9b6ff1a47e7/69cfd2d8b6.png"
-                    alt="Password Strength Classifier">
-
-                <div class="project-content">
-
-                    <h3>Password Strength Classification</h3>
+                    <h2>
+                        Data Scientist · Machine Learning Engineer · AI Enthusiast
+                    </h2>
 
                     <p>
-                        Developed a multiclass NLP classifier using
-                        TF-IDF and Logistic Regression to categorize
-                        password strength.
+                        I transform complex datasets into actionable insights
+                        and intelligent solutions that drive business growth,
+                        improve decision-making, and solve real-world problems.
                     </p>
 
-                    <span class="tag">NLP</span>
-                    <span class="tag">Machine Learning</span>
+                    <div class="buttons">
+
+                        <a
+                            href="#projects"
+                            class="btn btn-primary"
+                        >
+                            View My Projects
+                        </a>
+
+                        <a
+                            href="mailto:satyaprakash.mohanty393@gmail.com"
+                            class="btn btn-outline"
+                        >
+                            Contact Me
+                        </a>
+
+                        <a
+                            href="https://github.com/Satya-789"
+                            class="btn btn-outline"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            GitHub ↗
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="profile-wrapper fade-in">
+
+                    <div class="profile-card">
+
+                        <img
+                            src="https://images.codebasics.io/filters:format(webp)/fit-in/600x600/uploads/learner-portfolio/profile-images/485353/6990d68a43d68/c5ceec9140.jpg"
+                            alt="Portrait of Satya Prakash Mohanty"
+                            loading="eager"
+                        >
+
+                    </div>
 
                 </div>
 
             </div>
 
-
-            <!-- Flight -->
-
-            <div class="card project fade-in">
-
-                <img
-                    class="project-image"
-                    src="https://images.codebasics.io/filters:format(webp)/fit-in/600x600/uploads/learner-portfolio/projects/thumbnail/485353/6a9b725f5931d/c2972f6973.png"
-                    alt="Flight Price Prediction">
-
-                <div class="project-content">
-
-                    <h3>Flight Price Prediction</h3>
-
-            <p>
-                Machine learning project focused on predicting
-                flight prices using historical travel data.
-            </p>
-
-            <span class="tag">Travel</span>
-            <span class="tag">Machine Learning</span>
-
-            <div class="view-link">
-                View Project →
-            </div>
-
-        </div>
-
-    </div>
-
-                </div>
-
-            </div>
+        </section>
 
 
-            <!-- Movie -->
+        <!-- =====================================================
+             ABOUT
+        ====================================================== -->
 
-            <div class="card project fade-in">
+        <section id="about">
 
-                <img
-                    class="project-image"
-                    src="https://images.codebasics.io/filters:format(webp)/fit-in/600x600/uploads/learner-portfolio/projects/thumbnail/485353/6a9b759066261/bcb37c4ecd.png"
-                    alt="Movie Recommendation System">
+            <div class="container">
 
-                <div class="project-content">
+                <div class="section-title fade-in">
 
-                    <h3>Movie Recommendation System</h3>
+                    <h2>About Me</h2>
 
                     <p>
-                        Recommendation system designed to suggest
-                        movies based on user preferences and movie
-                        characteristics.
+                        Data, AI and technology enthusiast
                     </p>
 
-                    <span class="tag">Recommendation</span>
-                    <span class="tag">Machine Learning</span>
+                </div>
+
+
+                <div class="about-grid">
+
+                    <article class="card fade-in">
+
+                        <p>
+                            👨‍💻 Hi, I'm Satya Prakash Mohanty, a passionate
+                            Data Science Enthusiast, Machine Learning Engineer
+                            and Deep Learning Practitioner.
+                        </p>
+
+                        <p>
+                            🚀 I enjoy transforming raw and complex data into
+                            meaningful insights and developing machine learning
+                            models that solve real-world problems.
+                        </p>
+
+                    </article>
+
+
+                    <article class="card fade-in">
+
+                        <p>
+                            💡 My interests include Artificial Intelligence,
+                            Machine Learning, Deep Learning, Natural Language
+                            Processing and Generative AI.
+                        </p>
+
+                        <p>
+                            🎯 My goal is to leverage data and AI to create
+                            impactful solutions while continuously growing
+                            as a technology professional.
+                        </p>
+
+                    </article>
 
                 </div>
 
             </div>
 
+        </section>
 
-            <!-- Stock -->
 
-            <div class="card project fade-in">
+        <!-- =====================================================
+             SKILLS
+        ====================================================== -->
 
-                <img
-                    class="project-image"
-                    src="https://images.codebasics.io/filters:format(webp)/fit-in/600x600/uploads/learner-portfolio/projects/thumbnail/485353/6a9b6a03453a5/d88d9b99c5.png"
-                    alt="Stock Price Prediction">
+        <section id="skills">
 
-                <div class="project-content">
+            <div class="container">
 
-                    <h3>Stock Price Prediction</h3>
+                <div class="section-title fade-in">
+
+                    <h2>Technical Skills</h2>
 
                     <p>
-                        Time-series forecasting project using
-                        statistical and machine learning approaches
-                        to predict stock prices.
+                        Technologies and concepts I work with
                     </p>
 
-                    <span class="tag">Finance</span>
-                    <span class="tag">Time Series</span>
+                </div>
+
+
+                <div class="skills fade-in">
+
+                    <span class="skill">Python</span>
+                    <span class="skill">Pandas</span>
+                    <span class="skill">NumPy</span>
+                    <span class="skill">SQL</span>
+
+                    <span class="skill">Scikit-learn</span>
+                    <span class="skill">Machine Learning</span>
+                    <span class="skill">Feature Engineering</span>
+                    <span class="skill">Data Preprocessing</span>
+
+                    <span class="skill">Regression</span>
+                    <span class="skill">Classification</span>
+                    <span class="skill">Decision Trees</span>
+                    <span class="skill">Random Forest</span>
+                    <span class="skill">SVM</span>
+                    <span class="skill">KNN</span>
+                    <span class="skill">Gradient Boosting</span>
+
+                    <span class="skill">Clustering</span>
+                    <span class="skill">K-Means</span>
+                    <span class="skill">DBSCAN</span>
+                    <span class="skill">PCA</span>
+
+                    <span class="skill">Deep Learning</span>
+                    <span class="skill">CNN</span>
+                    <span class="skill">ResNet50</span>
+                    <span class="skill">Transfer Learning</span>
+
+                    <span class="skill">Computer Vision</span>
+                    <span class="skill">TensorFlow</span>
+                    <span class="skill">Keras</span>
+                    <span class="skill">PyTorch</span>
+
+                    <span class="skill">NLP</span>
+                    <span class="skill">Generative AI</span>
+
+                    <span class="skill">Time Series</span>
+                    <span class="skill">ARIMA</span>
+                    <span class="skill">ARIMAX</span>
+
+                    <span class="skill">AUC</span>
+                    <span class="skill">Precision</span>
+                    <span class="skill">Recall</span>
+                    <span class="skill">F1 Score</span>
+
+                    <span class="skill">Matplotlib</span>
+                    <span class="skill">Seaborn</span>
+                    <span class="skill">Streamlit</span>
+                    <span class="skill">GitHub</span>
+                    <span class="skill">MySQL</span>
+
+                    <span class="skill">Web Scraping</span>
+                    <span class="skill">Requests</span>
+                    <span class="skill">BeautifulSoup</span>
 
                 </div>
 
             </div>
 
-        </div>
-
-    </div>
-
-</section>
+        </section>
 
 
-<!-- ================= EXPERIENCE ================= -->
+        <!-- =====================================================
+             PROJECTS
+        ====================================================== -->
 
-<section id="experience">
+        <section id="projects">
 
-    <div class="container">
+            <div class="container">
 
-        <div class="section-title fade-in">
+                <div class="section-title fade-in">
 
-            <h2>Experience</h2>
+                    <h2>My Projects</h2>
 
-            <p>
-                My professional learning and project experience
-            </p>
+                    <p>
+                        Machine learning and data science projects
+                    </p>
 
-        </div>
-
-
-        <div class="timeline">
-
-
-            <div class="experience card fade-in">
-
-                <h3>Data Scientist Intern</h3>
-
-                <div class="company">
-                    BCG Data Science Job Simulation · Forage
                 </div>
 
-                <div class="date">
-                    Virtual · May 2026 – Jun 2026
+
+                <div class="projects-grid">
+
+
+                    <!-- Password Strength -->
+
+                    <article class="card project fade-in">
+
+                        <img
+                            class="project-image"
+                            src="https://images.codebasics.io/filters:format(webp)/fit-in/600x600/uploads/learner-portfolio/projects/thumbnail/485353/6a9b6ff1a47e7/69cfd2d8b6.png"
+                            alt="Password Strength Classification project"
+                            loading="lazy"
+                        >
+
+                        <div class="project-content">
+
+                            <h3>
+                                Password Strength Classification
+                            </h3>
+
+                            <p>
+                                Developed a multiclass NLP classifier using
+                                TF-IDF and Logistic Regression to categorize
+                                password strength.
+                            </p>
+
+                            <div class="tags">
+
+                                <span class="tag">NLP</span>
+                                <span class="tag">Machine Learning</span>
+                                <span class="tag">TF-IDF</span>
+
+                            </div>
+
+                            <div class="project-links">
+
+                                <!-- Replace with the actual project URL -->
+                                <a
+                                    href="https://github.com/Satya-789"
+                                    class="project-link"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    View Project ↗
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Flight Price -->
+
+                    <article class="card project fade-in">
+
+                        <img
+                            class="project-image"
+                            src="https://images.codebasics.io/filters:format(webp)/fit-in/600x600/uploads/learner-portfolio/projects/thumbnail/485353/6a9b725f5931d/c2972f6973.png"
+                            alt="Flight Price Prediction project"
+                            loading="lazy"
+                        >
+
+                        <div class="project-content">
+
+                            <h3>
+                                Flight Price Prediction
+                            </h3>
+
+                            <p>
+                                Machine learning project focused on predicting
+                                flight prices using historical travel data.
+                            </p>
+
+                            <div class="tags">
+
+                                <span class="tag">Travel</span>
+                                <span class="tag">Machine Learning</span>
+
+                            </div>
+
+                            <div class="project-links">
+
+                                <!-- Replace with the actual project URL -->
+                                <a
+                                    href="https://github.com/Satya-789"
+                                    class="project-link"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    View Project ↗
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Movie Recommendation -->
+
+                    <article class="card project fade-in">
+
+                        <img
+                            class="project-image"
+                            src="https://images.codebasics.io/filters:format(webp)/fit-in/600x600/uploads/learner-portfolio/projects/thumbnail/485353/6a9b759066261/bcb37c4ecd.png"
+                            alt="Movie Recommendation System project"
+                            loading="lazy"
+                        >
+
+                        <div class="project-content">
+
+                            <h3>
+                                Movie Recommendation System
+                            </h3>
+
+                            <p>
+                                Recommendation system designed to suggest
+                                movies based on user preferences and movie
+                                characteristics.
+                            </p>
+
+                            <div class="tags">
+
+                                <span class="tag">Recommendation</span>
+                                <span class="tag">Machine Learning</span>
+
+                            </div>
+
+                            <div class="project-links">
+
+                                <!-- Replace with the actual project URL -->
+                                <a
+                                    href="https://github.com/Satya-789"
+                                    class="project-link"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    View Project ↗
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Stock Prediction -->
+
+                    <article class="card project fade-in">
+
+                        <img
+                            class="project-image"
+                            src="https://images.codebasics.io/filters:format(webp)/fit-in/600x600/uploads/learner-portfolio/projects/thumbnail/485353/6a9b6a03453a5/d88d9b99c5.png"
+                            alt="Stock Price Prediction project"
+                            loading="lazy"
+                        >
+
+                        <div class="project-content">
+
+                            <h3>
+                                Stock Price Prediction
+                            </h3>
+
+                            <p>
+                                Time-series forecasting project using
+                                statistical and machine learning approaches
+                                to predict stock prices.
+                            </p>
+
+                            <div class="tags">
+
+                                <span class="tag">Finance</span>
+                                <span class="tag">Time Series</span>
+                                <span class="tag">ARIMA</span>
+
+                            </div>
+
+                            <div class="project-links">
+
+                                <!-- Replace with the actual project URL -->
+                                <a
+                                    href="https://github.com/Satya-789"
+                                    class="project-link"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    View Project ↗
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
                 </div>
 
-                <ul>
-
-                    <li>
-                        Analyzed customer churn patterns to identify
-                        key retention drivers and generate actionable
-                        business insights.
-                    </li>
-
-                    <li>
-                        Engineered and processed features using
-                        Pandas and NumPy.
-                    </li>
-
-                    <li>
-                        Translated analytical findings into an
-                        executive summary with recommended retention
-                        strategies and measurable KPIs.
-                    </li>
-
-                </ul>
-
             </div>
 
+        </section>
 
-            <div class="experience card fade-in">
 
-                <h3>Data Scientist Intern</h3>
+        <!-- =====================================================
+             EXPERIENCE
+        ====================================================== -->
 
-                <div class="company">
-                    AtliQ Technologies
+        <section id="experience">
+
+            <div class="container">
+
+                <div class="section-title fade-in">
+
+                    <h2>Experience</h2>
+
+                    <p>
+                        My professional learning and project experience
+                    </p>
+
                 </div>
 
-                <div class="date">
-                    Virtual · Aug 2025 – Sep 2025
+
+                <div class="timeline">
+
+
+                    <article class="experience card fade-in">
+
+                        <h3>
+                            Data Scientist Intern
+                        </h3>
+
+                        <div class="company">
+                            BCG Data Science Job Simulation · Forage
+                        </div>
+
+                        <div class="date">
+                            Virtual · May 2026 – Jun 2026
+                        </div>
+
+                        <ul>
+
+                            <li>
+                                Analyzed customer churn patterns to identify
+                                key retention drivers and generate actionable
+                                business insights.
+                            </li>
+
+                            <li>
+                                Engineered and processed features using
+                                Pandas and NumPy.
+                            </li>
+
+                            <li>
+                                Translated analytical findings into an
+                                executive summary with recommended retention
+                                strategies and measurable KPIs.
+                            </li>
+
+                        </ul>
+
+                    </article>
+
+
+                    <article class="experience card fade-in">
+
+                        <h3>
+                            Data Scientist Intern
+                        </h3>
+
+                        <div class="company">
+                            AtliQ Technologies
+                        </div>
+
+                        <div class="date">
+                            Virtual · Aug 2025 – Sep 2025
+                        </div>
+
+                        <ul>
+
+                            <li>
+                                Cleaned and preprocessed datasets to improve
+                                data quality and reliability.
+                            </li>
+
+                            <li>
+                                Engineered domain-driven features using
+                                Pandas, contributing to approximately
+                                12% improvement in model accuracy.
+                            </li>
+
+                            <li>
+                                Built and deployed a machine learning
+                                application using Streamlit.
+                            </li>
+
+                            <li>
+                                Used GitHub workflows for development and
+                                deployment.
+                            </li>
+
+                            <li>
+                                Worked on F&B-focused projects and translated
+                                data insights into actionable recommendations.
+                            </li>
+
+                        </ul>
+
+                    </article>
+
                 </div>
 
-                <ul>
+            </div>
 
-                    <li>
-                        Cleaned and preprocessed datasets to improve
-                        data quality and reliability.
-                    </li>
+        </section>
 
-                    <li>
-                        Engineered domain-driven features using
-                        Pandas, contributing to approximately
-                        12% improvement in model accuracy.
-                    </li>
 
-                    <li>
-                        Built and deployed a machine learning
-                        application using Streamlit.
-                    </li>
+        <!-- =====================================================
+             CERTIFICATIONS
+        ====================================================== -->
 
-                    <li>
-                        Used GitHub workflows for development and
-                        deployment.
-                    </li>
+        <section id="certificates">
 
-                    <li>
-                        Worked on F&B-focused projects and translated
-                        data insights into actionable recommendations.
-                    </li>
+            <div class="container">
 
-                </ul>
+                <div class="section-title fade-in">
+
+                    <h2>Certifications</h2>
+
+                    <p>
+                        Courses and professional learning
+                    </p>
+
+                </div>
+
+
+                <div class="certificates">
+
+
+                    <article class="card certificate fade-in">
+
+                        <h3>
+                            Math and Statistics For AI, Data Science
+                        </h3>
+
+                        <p>
+                            Codebasics
+                        </p>
+
+                        <!-- Replace href with actual certificate URL -->
+                        <a
+                            href="https://www.codebasics.io/"
+                            class="btn btn-outline btn-small"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            View Certificate ↗
+                        </a>
+
+                    </article>
+
+
+                    <article class="card certificate fade-in">
+
+                        <h3>
+                            Gen AI to Agentic AI with Business Projects
+                        </h3>
+
+                        <p>
+                            Codebasics
+                        </p>
+
+                        <!-- Replace href with actual certificate URL -->
+                        <a
+                            href="https://www.codebasics.io/"
+                            class="btn btn-outline btn-small"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            View Certificate ↗
+                        </a>
+
+                    </article>
+
+
+                    <article class="card certificate fade-in">
+
+                        <h3>
+                            Natural Language Processing
+                        </h3>
+
+                        <p>
+                            Codebasics
+                        </p>
+
+                        <!-- Replace href with actual certificate URL -->
+                        <a
+                            href="https://www.codebasics.io/"
+                            class="btn btn-outline btn-small"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            View Certificate ↗
+                        </a>
+
+                    </article>
+
+
+                    <article class="card certificate fade-in">
+
+                        <h3>
+                            Master Machine Learning for Data Science & AI
+                        </h3>
+
+                        <p>
+                            Codebasics
+                        </p>
+
+                        <!-- Replace href with actual certificate URL -->
+                        <a
+                            href="https://www.codebasics.io/"
+                            class="btn btn-outline btn-small"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            View Certificate ↗
+                        </a>
+
+                    </article>
+
+
+                    <article class="card certificate fade-in">
+
+                        <h3>
+                            Deep Learning: Beginner to Advanced
+                        </h3>
+
+                        <p>
+                            Codebasics
+                        </p>
+
+                        <!-- Replace href with actual certificate URL -->
+                        <a
+                            href="https://www.codebasics.io/"
+                            class="btn btn-outline btn-small"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            View Certificate ↗
+                        </a>
+
+                    </article>
+
+
+                    <article class="card certificate fade-in">
+
+                        <h3>
+                            Data Science Foundation Bootcamp
+                        </h3>
+
+                        <p>
+                            Codebasics
+                        </p>
+
+                        <!-- Replace href with actual certificate URL -->
+                        <a
+                            href="https://www.codebasics.io/"
+                            class="btn btn-outline btn-small"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            View Certificate ↗
+                        </a>
+
+                    </article>
+
+
+                    <article class="card certificate fade-in">
+
+                        <h3>
+                            IBM Data Science
+                        </h3>
+
+                        <p>
+                            IBM
+                        </p>
+
+                        <!-- Replace href with actual certificate URL -->
+                        <a
+                            href="https://www.ibm.com/"
+                            class="btn btn-outline btn-small"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            View Certificate ↗
+                        </a>
+
+                    </article>
+
+                </div>
 
             </div>
 
-        </div>
-
-    </div>
-
-</section>
+        </section>
 
 
-<!-- ================= CERTIFICATES ================= -->
+        <!-- =====================================================
+             CONTACT
+        ====================================================== -->
 
-<section id="certificates">
+        <section id="contact">
 
-    <div class="container">
+            <div class="container">
 
-        <div class="section-title fade-in">
+                <div class="card contact-card fade-in">
 
-            <h2>Certifications</h2>
+                    <div class="section-title">
 
-            <p>
-                Courses and professional learning
-            </p>
+                        <h2>Let's Connect</h2>
 
-        </div>
+                        <p>
+                            I'm open to discussing projects, opportunities,
+                            creative ideas and collaborations.
+                        </p>
 
-
-        <div class="certificates">
-
-
-            <div class="card certificate fade-in">
-                <h3>Math and Statistics For AI, Data Science</h3>
-                <p>Codebasics</p>
-            </div>
+                    </div>
 
 
-            <div class="card certificate fade-in">
-                <h3>Gen AI to Agentic AI with Business Projects</h3>
-                <p>Codebasics</p>
-            </div>
+                    <div class="socials">
 
+                        <a
+                            class="social"
+                            href="mailto:satyaprakash.mohanty393@gmail.com"
+                        >
+                            📧 Email
+                        </a>
 
-            <div class="card certificate fade-in">
-                <h3>Natural Language Processing</h3>
-                <p>Codebasics</p>
-            </div>
+                        <a
+                            class="social"
+                            href="https://www.linkedin.com/in/satya-prakash-mohanty/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            💼 LinkedIn ↗
+                        </a>
 
+                        <a
+                            class="social"
+                            href="https://github.com/Satya-789"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            💻 GitHub ↗
+                        </a>
 
-            <div class="card certificate fade-in">
-                <h3>Master Machine Learning for Data Science & AI</h3>
-                <p>Codebasics</p>
-            </div>
+                        <a
+                            class="social"
+                            href="tel:+919668234042"
+                        >
+                            📱 Call
+                        </a>
 
+                    </div>
 
-            <div class="card certificate fade-in">
-                <h3>Deep Learning: Beginner to Advanced</h3>
-                <p>Codebasics</p>
-            </div>
-
-
-            <div class="card certificate fade-in">
-                <h3>Data Science Foundation Bootcamp</h3>
-                <p>Codebasics</p>
-            </div>
-
-
-            <div class="card certificate fade-in">
-                <h3>IBM Data Science</h3>
-                <p>IBM</p>
-            </div>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= CONTACT ================= -->
-
-<section id="contact">
-
-    <div class="container">
-
-        <div class="card contact-card fade-in">
-
-            <div class="section-title">
-
-                <h2>Let's Connect</h2>
-
-                <p>
-                    I'm open to discussing projects, opportunities,
-                    creative ideas and collaborations.
-                </p>
+                </div>
 
             </div>
 
+        </section>
 
-            <div class="socials">
-
-                <a class="social"
-                   href="mailto:satyaprakash.mohanty393@gmail.com">
-                    📧 Email
-                </a>
-
-                <a class="social"
-                   href="https://www.linkedin.com/in/satya-prakash-mohanty/"
-                   target="_blank">
-                    💼 LinkedIn
-                </a>
-
-                <a class="social"
-                   href="https://github.com/Satya-789"
-                   target="_blank">
-                    💻 GitHub
-                </a>
-
-                <a class="social"
-                   href="tel:+919668234042">
-                    📱 Call
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
+    </main>
 
 
-<!-- ================= FOOTER ================= -->
+    <!-- =========================================================
+         FOOTER
+    ========================================================= -->
 
-<footer>
+    <footer>
 
-    <p>
-        © <span id="year"></span> Satya Prakash Mohanty.
-        Built with HTML, CSS & JavaScript.
-    </p>
+        <p>
+            © <span id="year"></span>
+            Satya Prakash Mohanty.
+            Built with HTML, CSS & JavaScript.
+        </p>
 
-</footer>
+    </footer>
 
 
-<script>
+    <!-- =========================================================
+         JAVASCRIPT
+    ========================================================= -->
 
-    /* Mobile menu */
+    <script>
 
-    function toggleMenu() {
+        "use strict";
+
+
+        /* =====================================================
+           MOBILE MENU
+        ====================================================== */
+
+        const menuBtn = document.getElementById("menuBtn");
+        const navLinks = document.getElementById("navLinks");
+
+
+        function toggleMenu() {
+
+            const isOpen =
+                navLinks.classList.toggle("active");
+
+            menuBtn.setAttribute(
+                "aria-expanded",
+                String(isOpen)
+            );
+
+            menuBtn.setAttribute(
+                "aria-label",
+                isOpen
+                    ? "Close navigation menu"
+                    : "Open navigation menu"
+            );
+
+        }
+
+
+        menuBtn.addEventListener(
+            "click",
+            toggleMenu
+        );
+
+
+        /* Close menu after clicking a navigation link */
 
         document
-            .getElementById("navLinks")
-            .classList.toggle("active");
+            .querySelectorAll(".nav-links a")
+            .forEach(link => {
 
-    }
+                link.addEventListener(
+                    "click",
+                    () => {
 
+                        navLinks.classList.remove("active");
 
-    /* Close menu after clicking */
+                        menuBtn.setAttribute(
+                            "aria-expanded",
+                            "false"
+                        );
 
-    document.querySelectorAll(".nav-links a").forEach(link => {
-
-        link.addEventListener("click", () => {
-
-            document
-                .getElementById("navLinks")
-                .classList.remove("active");
-
-        });
-
-    });
-
-
-    /* Current year */
-
-    document.getElementById("year").textContent =
-        new Date().getFullYear();
-
-
-    /* Scroll animation */
-
-    const observer =
-        new IntersectionObserver(
-            entries => {
-
-                entries.forEach(entry => {
-
-                    if (entry.isIntersecting) {
-
-                        entry.target.classList.add("visible");
+                        menuBtn.setAttribute(
+                            "aria-label",
+                            "Open navigation menu"
+                        );
 
                     }
+                );
 
-                });
+            });
 
-            },
-            {
-                threshold: 0.1
+
+        /* Close menu when pressing Escape */
+
+        document.addEventListener(
+            "keydown",
+            event => {
+
+                if (
+                    event.key === "Escape" &&
+                    navLinks.classList.contains("active")
+                ) {
+
+                    navLinks.classList.remove("active");
+
+                    menuBtn.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+                    menuBtn.setAttribute(
+                        "aria-label",
+                        "Open navigation menu"
+                    );
+
+                    menuBtn.focus();
+
+                }
+
             }
         );
 
 
-    document
-        .querySelectorAll(".fade-in")
-        .forEach(el => observer.observe(el));
+        /* =====================================================
+           CURRENT YEAR
+        ====================================================== */
 
-</script>
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+
+
+        /* =====================================================
+           SCROLL ANIMATION
+        ====================================================== */
+
+        const animatedElements =
+            document.querySelectorAll(".fade-in");
+
+
+        if ("IntersectionObserver" in window) {
+
+            const observer =
+                new IntersectionObserver(
+                    entries => {
+
+                        entries.forEach(entry => {
+
+                            if (entry.isIntersecting) {
+
+                                entry.target.classList.add("visible");
+
+                                observer.unobserve(
+                                    entry.target
+                                );
+
+                            }
+
+                        });
+
+                    },
+                    {
+                        threshold: 0.1
+                    }
+                );
+
+
+            animatedElements.forEach(element => {
+
+                observer.observe(element);
+
+            });
+
+        } else {
+
+            /* Fallback for older browsers */
+
+            animatedElements.forEach(element => {
+
+                element.classList.add("visible");
+
+            });
+
+        }
+
+    </script>
 
 </body>
 </html>
 ```
-
