@@ -3,68 +3,142 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Satya Prakash Mohanty - Data Scientist, Machine Learning Engineer and AI Enthusiast. Explore my projects, skills, experience and certifications.">
+
+    <meta name="author"
+          content="Satya Prakash Mohanty">
 
     <title>Satya Prakash Mohanty | Data Scientist & ML Engineer</title>
 
     <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
 </head>
 
 <body>
 
-<!-- ================= NAVBAR ================= -->
-<header>
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<header class="header">
+
     <nav class="navbar">
 
-        <div class="logo">
-            Satya Prakash
-        </div>
+        <a href="#home" class="logo">
+            Satya<span>.</span>
+        </a>
+
+        <button class="menu-toggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false">
+            ☰
+        </button>
 
         <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#certificates">Certificates</a></li>
-            <li><a href="#resume">Resume</a></li>
-            <li><a href="#contact">Contact</a></li>
+
+            <li>
+                <a href="#home">Home</a>
+            </li>
+
+            <li>
+                <a href="#about">About</a>
+            </li>
+
+            <li>
+                <a href="#skills">Skills</a>
+            </li>
+
+            <li>
+                <a href="#projects">Projects</a>
+            </li>
+
+            <li>
+                <a href="#experience">Experience</a>
+            </li>
+
+            <li>
+                <a href="#certificates">Certificates</a>
+            </li>
+
+            <li>
+                <a href="#resume">Resume</a>
+            </li>
+
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+
         </ul>
 
     </nav>
+
 </header>
 
 
-<!-- ================= HOME ================= -->
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<main>
+
 <section id="home" class="hero">
 
-    <div class="hero-content">
+    <div class="container hero-content">
 
         <div class="hero-text">
 
-            <p class="hello">Hello, I'm</p>
+            <p class="hello">
+                Hello, I'm
+            </p>
 
-            <h1>Satya Prakash Mohanty</h1>
+            <h1>
+                Satya Prakash Mohanty
+            </h1>
 
-            <h2>Data Scientist · Machine Learning Engineer · AI Enthusiast</h2>
+            <h2>
+                Data Scientist
+                <span>·</span>
+                Machine Learning Engineer
+                <span>·</span>
+                AI Enthusiast
+            </h2>
 
-            <p>
-                I build machine learning solutions, data analytics applications,
-                NLP systems and AI-powered projects.
+            <p class="hero-description">
+                I build machine learning solutions, data analytics
+                applications, NLP systems and AI-powered projects
+                that solve real-world problems.
             </p>
 
             <div class="hero-buttons">
 
                 <a href="https://github.com/Satya-789"
                    target="_blank"
+                   rel="noopener noreferrer"
                    class="btn primary">
                     GitHub
                 </a>
 
                 <a href="https://www.linkedin.com/in/satya-prakash-mohanty/"
                    target="_blank"
+                   rel="noopener noreferrer"
                    class="btn secondary">
                     LinkedIn
+                </a>
+
+                <a href="#projects"
+                   class="btn outline">
+                    View Projects
                 </a>
 
             </div>
@@ -73,6 +147,8 @@
 
 
         <div class="hero-image">
+
+            <div class="image-glow"></div>
 
             <img
                 src="https://images.codebasics.io/filters:format(webp)/fit-in/600x600/uploads/learner-portfolio/profile-images/485353/6990d68a43d68/c5ceec9140.jpg"
@@ -86,28 +162,74 @@
 </section>
 
 
-<!-- ================= ABOUT ================= -->
-<section id="about">
+<!-- =====================================================
+     ABOUT
+===================================================== -->
+
+<section id="about" class="section">
 
     <div class="container">
 
-        <h2 class="section-title">
-            About <span>Me</span>
-        </h2>
+        <div class="section-heading">
 
-        <div class="about-content">
-
-            <p>
-                I am a Data Scientist and Machine Learning Engineer interested
-                in solving real-world problems using data, machine learning,
-                artificial intelligence and analytics.
+            <p class="section-label">
+                ABOUT ME
             </p>
 
-            <p>
-                My experience includes data preprocessing, feature engineering,
-                machine learning, NLP, data visualization and deploying
-                applications using Streamlit.
-            </p>
+            <h2>
+                Turning Data Into
+                <span>Insights</span>
+            </h2>
+
+        </div>
+
+        <div class="about-grid">
+
+            <div class="about-text">
+
+                <p>
+                    I am a Data Scientist and Machine Learning Engineer
+                    interested in solving real-world problems using data,
+                    machine learning, artificial intelligence and analytics.
+                </p>
+
+                <p>
+                    My experience includes data preprocessing, feature
+                    engineering, machine learning, NLP, data visualization
+                    and deploying applications using Streamlit.
+                </p>
+
+                <p>
+                    I enjoy building practical projects that combine
+                    analytical thinking with modern AI and machine learning
+                    techniques.
+                </p>
+
+            </div>
+
+            <div class="about-stats">
+
+                <div class="stat-card">
+                    <strong>10+</strong>
+                    <span>Projects</span>
+                </div>
+
+                <div class="stat-card">
+                    <strong>7+</strong>
+                    <span>Certificates</span>
+                </div>
+
+                <div class="stat-card">
+                    <strong>2</strong>
+                    <span>Internships</span>
+                </div>
+
+                <div class="stat-card">
+                    <strong>AI</strong>
+                    <span>Focus</span>
+                </div>
+
+            </div>
 
         </div>
 
@@ -116,29 +238,100 @@
 </section>
 
 
-<!-- ================= SKILLS ================= -->
-<section id="skills">
+<!-- =====================================================
+     SKILLS
+===================================================== -->
+
+<section id="skills" class="section section-dark">
 
     <div class="container">
 
-        <h2 class="section-title">
-            My <span>Skills</span>
-        </h2>
+        <div class="section-heading">
+
+            <p class="section-label">
+                WHAT I WORK WITH
+            </p>
+
+            <h2>
+                My <span>Skills</span>
+            </h2>
+
+        </div>
+
 
         <div class="skills-grid">
 
-            <div class="skill">Python</div>
-            <div class="skill">Machine Learning</div>
-            <div class="skill">Deep Learning</div>
-            <div class="skill">NLP</div>
-            <div class="skill">Data Science</div>
-            <div class="skill">Pandas</div>
-            <div class="skill">NumPy</div>
-            <div class="skill">Scikit-Learn</div>
-            <div class="skill">SQL</div>
-            <div class="skill">Power BI</div>
-            <div class="skill">Streamlit</div>
-            <div class="skill">Git & GitHub</div>
+            <div class="skill-card">
+                <div class="skill-icon">🐍</div>
+                <h3>Python</h3>
+                <p>Data analysis, automation and ML development.</p>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon">🤖</div>
+                <h3>Machine Learning</h3>
+                <p>Classification, regression and predictive modeling.</p>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon">🧠</div>
+                <h3>Deep Learning</h3>
+                <p>Neural networks and modern AI techniques.</p>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon">💬</div>
+                <h3>NLP</h3>
+                <p>Text processing, classification and NLP systems.</p>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon">📊</div>
+                <h3>Data Science</h3>
+                <p>Data exploration, modeling and business insights.</p>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon">🐼</div>
+                <h3>Pandas & NumPy</h3>
+                <p>Data manipulation, preprocessing and analysis.</p>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon">⚙️</div>
+                <h3>Scikit-Learn</h3>
+                <p>Machine learning pipelines and model development.</p>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon">🗄️</div>
+                <h3>SQL</h3>
+                <p>Querying, transforming and analyzing data.</p>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon">📈</div>
+                <h3>Power BI</h3>
+                <p>Interactive dashboards and business analytics.</p>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon">🚀</div>
+                <h3>Streamlit</h3>
+                <p>Building and deploying interactive ML applications.</p>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon">🔧</div>
+                <h3>Git & GitHub</h3>
+                <p>Version control and collaborative development.</p>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon">✨</div>
+                <h3>Generative AI</h3>
+                <p>Exploring modern AI and agentic AI applications.</p>
+            </div>
 
         </div>
 
@@ -147,270 +340,464 @@
 </section>
 
 
-<!-- ================= PROJECTS ================= -->
-<section id="projects">
+<!-- =====================================================
+     PROJECTS
+===================================================== -->
+
+<section id="projects" class="section">
 
     <div class="container">
 
-        <h2 class="section-title">
-            My <span>Projects</span>
-        </h2>
+        <div class="section-heading">
+
+            <p class="section-label">
+                MY WORK
+            </p>
+
+            <h2>
+                Featured <span>Projects</span>
+            </h2>
+
+        </div>
+
 
         <div class="projects-grid">
 
 
             <!-- PROJECT 1 -->
-            <div class="project-card">
 
-                <img
-                    src="project1.png"
-                    alt="Password Strength Classification"
-                >
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <img
+                        src="https://images.codebasics.io/filters:format(webp)/fit-in/600x600/uploads/learner-portfolio/projects/thumbnail/485353/6a9b6ff1a47e7/69cfd2d8b6.png"
+                        alt="Password Strength Classification"
+                        loading="lazy"
+                    >
+
+                </div>
 
                 <div class="project-content">
 
-                    <h3>Password Strength Classification</h3>
+                    <span class="project-number">
+                        01
+                    </span>
+
+                    <h3>
+                        Password Strength Classification
+                    </h3>
 
                     <p>
                         Multiclass NLP classification system using TF-IDF
                         and Logistic Regression to classify password strength.
                     </p>
 
-                    <a href="#" class="btn primary">
-                        View Project
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>NLP</span>
+                        <span>TF-IDF</span>
+                        <span>Scikit-Learn</span>
+                    </div>
+
+                    <a href="https://github.com/Satya-789"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="project-link">
+                        View Project →
                     </a>
 
                 </div>
 
-            </div>
+            </article>
 
 
             <!-- PROJECT 2 -->
-            <div class="project-card">
 
-                <img
-                    src="https://images.codebasics.io/filters:format(webp)/fit-in/600x600/uploads/learner-portfolio/projects/thumbnail/485353/6a9b725f5931d/c2972f6973.png"
-                    alt="Flight Price Prediction"
-                >
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <img
+                        src="https://images.codebasics.io/filters:format(webp)/fit-in/600x600/uploads/learner-portfolio/projects/thumbnail/485353/6a9b725f5931d/c2972f6973.png"
+                        alt="Flight Price Prediction"
+                        loading="lazy"
+                    >
+
+                </div>
 
                 <div class="project-content">
 
-                    <h3>Flight Price Prediction</h3>
+                    <span class="project-number">
+                        02
+                    </span>
+
+                    <h3>
+                        Flight Price Prediction
+                    </h3>
 
                     <p>
                         Machine learning project that predicts flight prices
                         using historical travel data and relevant features.
                     </p>
 
-                    <a href="#" class="btn primary">
-                        View Project
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>ML</span>
+                        <span>Pandas</span>
+                        <span>Regression</span>
+                    </div>
+
+                    <a href="https://github.com/Satya-789"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="project-link">
+                        View Project →
                     </a>
 
                 </div>
 
-            </div>
+            </article>
 
 
             <!-- PROJECT 3 -->
-            <div class="project-card">
 
-                <img
-                    src="https://images.codebasics.io/filters:format(webp)/fit-in/600x600/uploads/learner-portfolio/projects/thumbnail/485353/6a9b759066261/bcb37c4ecd.png"
-                    alt="Movie Recommendation System"
-                >
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <img
+                        src="https://images.codebasics.io/filters:format(webp)/fit-in/600x600/uploads/learner-portfolio/projects/thumbnail/485353/6a9b759066261/bcb37c4ecd.png"
+                        alt="Movie Recommendation System"
+                        loading="lazy"
+                    >
+
+                </div>
 
                 <div class="project-content">
 
-                    <h3>Movie Recommendation System</h3>
+                    <span class="project-number">
+                        03
+                    </span>
+
+                    <h3>
+                        Movie Recommendation System
+                    </h3>
 
                     <p>
                         Recommendation system that suggests movies based
                         on user preferences and movie characteristics.
                     </p>
 
-                    <a href="#" class="btn primary">
-                        View Project
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>Recommendation</span>
+                        <span>ML</span>
+                    </div>
+
+                    <a href="https://github.com/Satya-789"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="project-link">
+                        View Project →
                     </a>
 
                 </div>
 
-            </div>
+            </article>
 
 
             <!-- PROJECT 4 -->
-            <div class="project-card">
 
-                <img
-                    src="https://images.codebasics.io/filters:format(webp)/fit-in/600x600/uploads/learner-portfolio/projects/thumbnail/485353/6a9b6a03453a5/d88d9b99c5.png"
-                    alt="Stock Price Prediction"
-                >
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <img
+                        src="https://images.codebasics.io/filters:format(webp)/fit-in/600x600/uploads/learner-portfolio/projects/thumbnail/485353/6a9b6a03453a5/d88d9b99c5.png"
+                        alt="Stock Price Prediction"
+                        loading="lazy"
+                    >
+
+                </div>
 
                 <div class="project-content">
 
-                    <h3>Stock Price Prediction</h3>
+                    <span class="project-number">
+                        04
+                    </span>
+
+                    <h3>
+                        Stock Price Prediction
+                    </h3>
 
                     <p>
                         Time-series forecasting project using statistical
                         techniques and machine learning.
                     </p>
 
-                    <a href="#" class="btn primary">
-                        View Project
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>Time Series</span>
+                        <span>ML</span>
+                    </div>
+
+                    <a href="https://github.com/Satya-789"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="project-link">
+                        View Project →
                     </a>
 
                 </div>
 
-            </div>
+            </article>
 
 
             <!-- PROJECT 5 -->
-            <div class="project-card">
 
-                <div class="project-image-placeholder">
+            <article class="project-card">
+
+                <div class="project-placeholder">
                     📊
                 </div>
 
                 <div class="project-content">
 
-                    <h3>Customer Churn Prediction</h3>
+                    <span class="project-number">
+                        05
+                    </span>
+
+                    <h3>
+                        Customer Churn Prediction
+                    </h3>
 
                     <p>
                         Machine learning model for identifying customers
                         who are likely to leave a business.
                     </p>
 
-                    <a href="#" class="btn primary">
-                        View Project
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>Classification</span>
+                        <span>Analytics</span>
+                    </div>
+
+                    <a href="https://github.com/Satya-789"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="project-link">
+                        View Project →
                     </a>
 
                 </div>
 
-            </div>
+            </article>
 
 
             <!-- PROJECT 6 -->
-            <div class="project-card">
 
-                <div class="project-image-placeholder">
+            <article class="project-card">
+
+                <div class="project-placeholder">
                     📈
                 </div>
 
                 <div class="project-content">
 
-                    <h3>Sales Data Analysis</h3>
+                    <span class="project-number">
+                        06
+                    </span>
+
+                    <h3>
+                        Sales Data Analysis
+                    </h3>
 
                     <p>
                         Data analytics project exploring sales trends,
                         revenue performance and business insights.
                     </p>
 
-                    <a href="#" class="btn primary">
-                        View Project
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>Pandas</span>
+                        <span>Power BI</span>
+                    </div>
+
+                    <a href="https://github.com/Satya-789"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="project-link">
+                        View Project →
                     </a>
 
                 </div>
 
-            </div>
+            </article>
 
 
             <!-- PROJECT 7 -->
-            <div class="project-card">
 
-                <div class="project-image-placeholder">
+            <article class="project-card">
+
+                <div class="project-placeholder">
                     💬
                 </div>
 
                 <div class="project-content">
 
-                    <h3>NLP Sentiment Analysis</h3>
+                    <span class="project-number">
+                        07
+                    </span>
+
+                    <h3>
+                        NLP Sentiment Analysis
+                    </h3>
 
                     <p>
                         NLP application for classifying text sentiment
                         using machine learning techniques.
                     </p>
 
-                    <a href="#" class="btn primary">
-                        View Project
+                    <div class="project-tags">
+                        <span>NLP</span>
+                        <span>Python</span>
+                        <span>ML</span>
+                    </div>
+
+                    <a href="https://github.com/Satya-789"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="project-link">
+                        View Project →
                     </a>
 
                 </div>
 
-            </div>
+            </article>
 
 
             <!-- PROJECT 8 -->
-            <div class="project-card">
 
-                <div class="project-image-placeholder">
+            <article class="project-card">
+
+                <div class="project-placeholder">
                     📊
                 </div>
 
                 <div class="project-content">
 
-                    <h3>Data Analytics Dashboard</h3>
+                    <span class="project-number">
+                        08
+                    </span>
+
+                    <h3>
+                        Data Analytics Dashboard
+                    </h3>
 
                     <p>
                         Interactive dashboard for visualizing business
                         KPIs, trends and analytical insights.
                     </p>
 
-                    <a href="#" class="btn primary">
-                        View Project
+                    <div class="project-tags">
+                        <span>Power BI</span>
+                        <span>SQL</span>
+                        <span>Analytics</span>
+                    </div>
+
+                    <a href="https://github.com/Satya-789"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="project-link">
+                        View Project →
                     </a>
 
                 </div>
 
-            </div>
+            </article>
 
 
             <!-- PROJECT 9 -->
-            <div class="project-card">
 
-                <div class="project-image-placeholder">
+            <article class="project-card">
+
+                <div class="project-placeholder">
                     🤖
                 </div>
 
                 <div class="project-content">
 
-                    <h3>AI Chatbot</h3>
+                    <span class="project-number">
+                        09
+                    </span>
+
+                    <h3>
+                        AI Chatbot
+                    </h3>
 
                     <p>
                         AI-powered chatbot designed to answer user
                         questions using natural language processing.
                     </p>
 
-                    <a href="#" class="btn primary">
-                        View Project
+                    <div class="project-tags">
+                        <span>AI</span>
+                        <span>NLP</span>
+                        <span>Python</span>
+                    </div>
+
+                    <a href="https://github.com/Satya-789"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="project-link">
+                        View Project →
                     </a>
 
                 </div>
 
-            </div>
+            </article>
 
 
             <!-- PROJECT 10 -->
-            <div class="project-card">
 
-                <div class="project-image-placeholder">
+            <article class="project-card">
+
+                <div class="project-placeholder">
                     🏠
                 </div>
 
                 <div class="project-content">
 
-                    <h3>House Price Prediction</h3>
+                    <span class="project-number">
+                        10
+                    </span>
+
+                    <h3>
+                        House Price Prediction
+                    </h3>
 
                     <p>
                         Regression-based machine learning model for
                         predicting residential property prices.
                     </p>
 
-                    <a href="#" class="btn primary">
-                        View Project
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>Regression</span>
+                        <span>ML</span>
+                    </div>
+
+                    <a href="https://github.com/Satya-789"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="project-link">
+                        View Project →
                     </a>
 
                 </div>
 
-            </div>
+            </article>
 
         </div>
 
@@ -419,57 +806,134 @@
 </section>
 
 
-<!-- ================= EXPERIENCE ================= -->
-<section id="experience">
+<!-- =====================================================
+     EXPERIENCE
+===================================================== -->
+
+<section id="experience" class="section section-dark">
 
     <div class="container">
 
-        <h2 class="section-title">
-            My <span>Experience</span>
-        </h2>
+        <div class="section-heading">
 
+            <p class="section-label">
+                MY JOURNEY
+            </p>
 
-        <div class="experience-card">
-
-            <h3>Data Scientist Intern</h3>
-
-            <h4>BCG Data Science Job Simulation · Forage</h4>
-
-            <span>May 2026 – Jun 2026 · Virtual</span>
-
-            <ul>
-                <li>Analyzed customer churn and business data.</li>
-                <li>Performed feature engineering using Pandas and NumPy.</li>
-                <li>Developed executive insights and retention strategies.</li>
-                <li>Identified important business KPIs.</li>
-            </ul>
-
-            <a href="#" class="btn primary">
-                View Certificate
-            </a>
+            <h2>
+                Work <span>Experience</span>
+            </h2>
 
         </div>
 
 
-        <div class="experience-card">
+        <div class="timeline">
 
-            <h3>Data Scientist Intern</h3>
 
-            <h4>AtliQ Technologies</h4>
+            <!-- EXPERIENCE 1 -->
 
-            <span>Aug 2025 – Sep 2025 · Virtual</span>
+            <article class="experience-card">
 
-            <ul>
-                <li>Cleaned and preprocessed datasets.</li>
-                <li>Performed domain-driven feature engineering.</li>
-                <li>Improved model accuracy by approximately 12%.</li>
-                <li>Built and deployed a Streamlit ML application.</li>
-                <li>Used GitHub workflows for project development.</li>
-            </ul>
+                <div class="experience-dot"></div>
 
-            <a href="#" class="btn primary">
-                View Certificate
-            </a>
+                <div class="experience-content">
+
+                    <span class="experience-date">
+                        May 2026 – Jun 2026 · Virtual
+                    </span>
+
+                    <h3>
+                        Data Scientist Intern
+                    </h3>
+
+                    <h4>
+                        BCG Data Science Job Simulation · Forage
+                    </h4>
+
+                    <ul>
+
+                        <li>
+                            Analyzed customer churn and business data.
+                        </li>
+
+                        <li>
+                            Performed feature engineering using
+                            Pandas and NumPy.
+                        </li>
+
+                        <li>
+                            Developed executive insights and
+                            retention strategies.
+                        </li>
+
+                        <li>
+                            Identified important business KPIs.
+                        </li>
+
+                    </ul>
+
+                    <a href="#certificates"
+                       class="btn small-btn">
+                        View Certificate
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- EXPERIENCE 2 -->
+
+            <article class="experience-card">
+
+                <div class="experience-dot"></div>
+
+                <div class="experience-content">
+
+                    <span class="experience-date">
+                        Aug 2025 – Sep 2025 · Virtual
+                    </span>
+
+                    <h3>
+                        Data Scientist Intern
+                    </h3>
+
+                    <h4>
+                        AtliQ Technologies
+                    </h4>
+
+                    <ul>
+
+                        <li>
+                            Cleaned and preprocessed datasets.
+                        </li>
+
+                        <li>
+                            Performed domain-driven feature engineering.
+                        </li>
+
+                        <li>
+                            Improved model accuracy by approximately 12%.
+                        </li>
+
+                        <li>
+                            Built and deployed a Streamlit ML application.
+                        </li>
+
+                        <li>
+                            Used GitHub workflows for project development.
+                        </li>
+
+                    </ul>
+
+                    <a href="#certificates"
+                       class="btn small-btn">
+                        View Certificate
+                    </a>
+
+                </div>
+
+            </article>
 
         </div>
 
@@ -478,58 +942,182 @@
 </section>
 
 
-<!-- ================= CERTIFICATES ================= -->
-<section id="certificates">
+<!-- =====================================================
+     CERTIFICATES
+===================================================== -->
+
+<section id="certificates" class="section">
 
     <div class="container">
 
-        <h2 class="section-title">
-            My <span>Certificates</span>
-        </h2>
+        <div class="section-heading">
+
+            <p class="section-label">
+                LEARNING
+            </p>
+
+            <h2>
+                My <span>Certificates</span>
+            </h2>
+
+        </div>
+
 
         <div class="certificate-grid">
 
-            <div class="certificate-card">
-                <h3>Math and Statistics For AI, Data Science</h3>
-                <p>Codebasics</p>
-                <a href="#" class="btn primary">View Certificate</a>
-            </div>
 
-            <div class="certificate-card">
-                <h3>Gen AI to Agentic AI with Business Projects</h3>
-                <p>Codebasics</p>
-                <a href="#" class="btn primary">View Certificate</a>
-            </div>
+            <article class="certificate-card">
 
-            <div class="certificate-card">
-                <h3>Natural Language Processing</h3>
-                <p>Codebasics</p>
-                <a href="#" class="btn primary">View Certificate</a>
-            </div>
+                <div class="certificate-icon">
+                    🧮
+                </div>
 
-            <div class="certificate-card">
-                <h3>Master Machine Learning for Data Science & AI</h3>
-                <p>Codebasics</p>
-                <a href="#" class="btn primary">View Certificate</a>
-            </div>
+                <h3>
+                    Math and Statistics For AI, Data Science
+                </h3>
 
-            <div class="certificate-card">
-                <h3>Deep Learning: Beginner to Advanced</h3>
-                <p>Codebasics</p>
-                <a href="#" class="btn primary">View Certificate</a>
-            </div>
+                <p>
+                    Codebasics
+                </p>
 
-            <div class="certificate-card">
-                <h3>Data Science Foundation Bootcamp</h3>
-                <p>Codebasics</p>
-                <a href="#" class="btn primary">View Certificate</a>
-            </div>
+                <a href="#"
+                   class="certificate-link">
+                    View Certificate →
+                </a>
 
-            <div class="certificate-card">
-                <h3>IBM Data Science</h3>
-                <p>IBM</p>
-                <a href="#" class="btn primary">View Certificate</a>
-            </div>
+            </article>
+
+
+            <article class="certificate-card">
+
+                <div class="certificate-icon">
+                    ✨
+                </div>
+
+                <h3>
+                    Gen AI to Agentic AI with Business Projects
+                </h3>
+
+                <p>
+                    Codebasics
+                </p>
+
+                <a href="#"
+                   class="certificate-link">
+                    View Certificate →
+                </a>
+
+            </article>
+
+
+            <article class="certificate-card">
+
+                <div class="certificate-icon">
+                    💬
+                </div>
+
+                <h3>
+                    Natural Language Processing
+                </h3>
+
+                <p>
+                    Codebasics
+                </p>
+
+                <a href="#"
+                   class="certificate-link">
+                    View Certificate →
+                </a>
+
+            </article>
+
+
+            <article class="certificate-card">
+
+                <div class="certificate-icon">
+                    🤖
+                </div>
+
+                <h3>
+                    Master Machine Learning for Data Science & AI
+                </h3>
+
+                <p>
+                    Codebasics
+                </p>
+
+                <a href="#"
+                   class="certificate-link">
+                    View Certificate →
+                </a>
+
+            </article>
+
+
+            <article class="certificate-card">
+
+                <div class="certificate-icon">
+                    🧠
+                </div>
+
+                <h3>
+                    Deep Learning: Beginner to Advanced
+                </h3>
+
+                <p>
+                    Codebasics
+                </p>
+
+                <a href="#"
+                   class="certificate-link">
+                    View Certificate →
+                </a>
+
+            </article>
+
+
+            <article class="certificate-card">
+
+                <div class="certificate-icon">
+                    📚
+                </div>
+
+                <h3>
+                    Data Science Foundation Bootcamp
+                </h3>
+
+                <p>
+                    Codebasics
+                </p>
+
+                <a href="#"
+                   class="certificate-link">
+                    View Certificate →
+                </a>
+
+            </article>
+
+
+            <article class="certificate-card">
+
+                <div class="certificate-icon">
+                    💻
+                </div>
+
+                <h3>
+                    IBM Data Science
+                </h3>
+
+                <p>
+                    IBM
+                </p>
+
+                <a href="#"
+                   class="certificate-link">
+                    View Certificate →
+                </a>
+
+            </article>
 
         </div>
 
@@ -538,14 +1126,26 @@
 </section>
 
 
-<!-- ================= RESUME PDF ================= -->
-<section id="resume">
+<!-- =====================================================
+     RESUME
+===================================================== -->
+
+<section id="resume" class="section section-dark">
 
     <div class="container">
 
-        <h2 class="section-title">
-            My <span>Resume</span>
-        </h2>
+        <div class="section-heading">
+
+            <p class="section-label">
+                RESUME
+            </p>
+
+            <h2>
+                My <span>Resume</span>
+            </h2>
+
+        </div>
+
 
         <div class="resume-box">
 
@@ -553,7 +1153,9 @@
                 📄
             </div>
 
-            <h3>Download My Resume</h3>
+            <h3>
+                Download My Resume
+            </h3>
 
             <p>
                 View or download my complete resume in PDF format.
@@ -561,7 +1163,6 @@
 
             <div class="resume-buttons">
 
-                <!-- Put your PDF file in the same folder -->
                 <a href="resume.pdf"
                    target="_blank"
                    class="btn primary">
@@ -569,7 +1170,7 @@
                 </a>
 
                 <a href="resume.pdf"
-                   download
+                   download="Satya_Prakash_Mohanty_Resume.pdf"
                    class="btn secondary">
                     Download PDF
                 </a>
@@ -583,98 +1184,122 @@
 </section>
 
 
-<!-- ================= IMAGES ================= -->
-<section id="images">
+<!-- =====================================================
+     CONTACT
+===================================================== -->
+
+<section id="contact" class="section">
 
     <div class="container">
 
-        <h2 class="section-title">
-            Project <span>Images</span>
-        </h2>
+        <div class="section-heading">
 
-        <div class="image-gallery">
-
-            <img
-                src="```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Satya Prakash Mohanty | Data Scientist & ML Engineer</title>
-
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-<!-- ================= NAVBAR ================= -->
-<header>
-    <nav class="navbar">
-
-        <div class="logo">
-            Satya Prakash
-        </div>
-
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#certificates">Certificates</a></li>
-            <li><a href="#resume">Resume</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-
-    </nav>
-</header>
-
-
-<!-- ================= HOME ================= -->
-<section id="home" class="hero">
-
-    <div class="hero-content">
-
-        <div class="hero-text">
-
-            <p class="hello">Hello, I'm</p>
-
-            <h1>Satya Prakash Mohanty</h1>
-
-            <h2>Data Scientist · Machine Learning Engineer · AI Enthusiast</h2>
-
-            <p>
-                I build machine learning solutions, data analytics applications,
-                NLP systems and AI-powered projects.
+            <p class="section-label">
+                GET IN TOUCH
             </p>
 
-            <div class="hero-buttons">
+            <h2>
+                Let's <span>Connect</span>
+            </h2>
 
-                <a href="https://github.com/Satya-789"
-                   target="_blank"
+        </div>
+
+
+        <div class="contact-grid">
+
+            <div class="contact-text">
+
+                <h3>
+                    Have a project or opportunity?
+                </h3>
+
+                <p>
+                    I'm always interested in discussing data science,
+                    machine learning, AI projects and career opportunities.
+                </p>
+
+                <a href="mailto:satyaprakash.mohanty393@gmail.com"
                    class="btn primary">
-                    GitHub
-                </a>
-
-                <a href="https://www.linkedin.com/in/satya-prakash-mohanty/"
-                   target="_blank"
-                   class="btn secondary">
-                    LinkedIn
+                    Email Me
                 </a>
 
             </div>
 
-        </div>
+
+            <div class="contact-details">
+
+                <div class="contact-item">
+
+                    <span class="contact-icon">
+                        ✉️
+                    </span>
+
+                    <div>
+                        <small>Email</small>
+
+                        <a href="mailto:satyaprakash.mohanty393@gmail.com">
+                            satyaprakash.mohanty393@gmail.com
+                        </a>
+                    </div>
+
+                </div>
 
 
-        <div class="hero-image">
+                <div class="contact-item">
 
-            <img
-                src="https://images.codebasics.io/filters:format(webp)/fit-in/600x600/uploads/learner-portfolio/profile-images/485353/6990d68a43d68/c5ceec9140.jpg"
-                alt="Satya Prakash Mohanty"
-            >
+                    <span class="contact-icon">
+                        📞
+                    </span>
+
+                    <div>
+                        <small>Phone</small>
+
+                        <a href="tel:+919668234042">
+                            +91 9668234042
+                        </a>
+                    </div>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <span class="contact-icon">
+                        💻
+                    </span>
+
+                    <div>
+                        <small>GitHub</small>
+
+                        <a href="https://github.com/Satya-789"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            github.com/Satya-789
+                        </a>
+                    </div>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <span class="contact-icon">
+                        🔗
+                    </span>
+
+                    <div>
+                        <small>LinkedIn</small>
+
+                        <a href="https://www.linkedin.com/in/satya-prakash-mohanty/"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            LinkedIn Profile
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
 
         </div>
 
@@ -682,546 +1307,110 @@
 
 </section>
 
+</main>
 
-<!-- ================= ABOUT ================= -->
-<section id="about">
 
-    <div class="container">
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
-        <h2 class="section-title">
-            About <span>Me</span>
-        </h2>
+<footer class="footer">
 
-        <div class="about-content">
+    <div class="container footer-content">
+
+        <div>
+
+            <h3>
+                Satya<span>.</span>
+            </h3>
 
             <p>
-                I am a Data Scientist and Machine Learning Engineer interested
-                in solving real-world problems using data, machine learning,
-                artificial intelligence and analytics.
-            </p>
-
-            <p>
-                My experience includes data preprocessing, feature engineering,
-                machine learning, NLP, data visualization and deploying
-                applications using Streamlit.
+                Data Scientist · ML Engineer · AI Enthusiast
             </p>
 
         </div>
 
-    </div>
 
-</section>
+        <div class="footer-socials">
 
-
-<!-- ================= SKILLS ================= -->
-<section id="skills">
-
-    <div class="container">
-
-        <h2 class="section-title">
-            My <span>Skills</span>
-        </h2>
-
-        <div class="skills-grid">
-
-            <div class="skill">Python</div>
-            <div class="skill">Machine Learning</div>
-            <div class="skill">Deep Learning</div>
-            <div class="skill">NLP</div>
-            <div class="skill">Data Science</div>
-            <div class="skill">Pandas</div>
-            <div class="skill">NumPy</div>
-            <div class="skill">Scikit-Learn</div>
-            <div class="skill">SQL</div>
-            <div class="skill">Power BI</div>
-            <div class="skill">Streamlit</div>
-            <div class="skill">Git & GitHub</div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= PROJECTS ================= -->
-<section id="projects">
-
-    <div class="container">
-
-        <h2 class="section-title">
-            My <span>Projects</span>
-        </h2>
-
-        <div class="projects-grid">
-
-
-            <!-- PROJECT 1 -->
-            <div class="project-card">
-
-                <img
-                    src="https://images.codebasics.io/filters:format(webp)/fit-in/600x600/uploads/learner-portfolio/projects/thumbnail/485353/6a9b6ff1a47e7/69cfd2d8b6.png"
-                    alt="Password Strength Classification"
-                >
-
-                <div class="project-content">
-
-                    <h3>Password Strength Classification</h3>
-
-                    <p>
-                        Multiclass NLP classification system using TF-IDF
-                        and Logistic Regression to classify password strength.
-                    </p>
-
-                    <a href="#" class="btn primary">
-                        View Project
-                    </a>
-
-                </div>
-
-            </div>
-
-
-            <!-- PROJECT 2 -->
-            <div class="project-card">
-
-                <img
-                    src="https://images.codebasics.io/filters:format(webp)/fit-in/600x600/uploads/learner-portfolio/projects/thumbnail/485353/6a9b725f5931d/c2972f6973.png"
-                    alt="Flight Price Prediction"
-                >
-
-                <div class="project-content">
-
-                    <h3>Flight Price Prediction</h3>
-
-                    <p>
-                        Machine learning project that predicts flight prices
-                        using historical travel data and relevant features.
-                    </p>
-
-                    <a href="#" class="btn primary">
-                        View Project
-                    </a>
-
-                </div>
-
-            </div>
-
-
-            <!-- PROJECT 3 -->
-            <div class="project-card">
-
-                <img
-                    src="https://images.codebasics.io/filters:format(webp)/fit-in/600x600/uploads/learner-portfolio/projects/thumbnail/485353/6a9b759066261/bcb37c4ecd.png"
-                    alt="Movie Recommendation System"
-                >
-
-                <div class="project-content">
-
-                    <h3>Movie Recommendation System</h3>
-
-                    <p>
-                        Recommendation system that suggests movies based
-                        on user preferences and movie characteristics.
-                    </p>
-
-                    <a href="#" class="btn primary">
-                        View Project
-                    </a>
-
-                </div>
-
-            </div>
-
-
-            <!-- PROJECT 4 -->
-            <div class="project-card">
-
-                <img
-                    src="https://images.codebasics.io/filters:format(webp)/fit-in/600x600/uploads/learner-portfolio/projects/thumbnail/485353/6a9b6a03453a5/d88d9b99c5.png"
-                    alt="Stock Price Prediction"
-                >
-
-                <div class="project-content">
-
-                    <h3>Stock Price Prediction</h3>
-
-                    <p>
-                        Time-series forecasting project using statistical
-                        techniques and machine learning.
-                    </p>
-
-                    <a href="#" class="btn primary">
-                        View Project
-                    </a>
-
-                </div>
-
-            </div>
-
-
-            <!-- PROJECT 5 -->
-            <div class="project-card">
-
-                <div class="project-image-placeholder">
-                    📊
-                </div>
-
-                <div class="project-content">
-
-                    <h3>Customer Churn Prediction</h3>
-
-                    <p>
-                        Machine learning model for identifying customers
-                        who are likely to leave a business.
-                    </p>
-
-                    <a href="#" class="btn primary">
-                        View Project
-                    </a>
-
-                </div>
-
-            </div>
-
-
-            <!-- PROJECT 6 -->
-            <div class="project-card">
-
-                <div class="project-image-placeholder">
-                    📈
-                </div>
-
-                <div class="project-content">
-
-                    <h3>Sales Data Analysis</h3>
-
-                    <p>
-                        Data analytics project exploring sales trends,
-                        revenue performance and business insights.
-                    </p>
-
-                    <a href="#" class="btn primary">
-                        View Project
-                    </a>
-
-                </div>
-
-            </div>
-
-
-            <!-- PROJECT 7 -->
-            <div class="project-card">
-
-                <div class="project-image-placeholder">
-                    💬
-                </div>
-
-                <div class="project-content">
-
-                    <h3>NLP Sentiment Analysis</h3>
-
-                    <p>
-                        NLP application for classifying text sentiment
-                        using machine learning techniques.
-                    </p>
-
-                    <a href="#" class="btn primary">
-                        View Project
-                    </a>
-
-                </div>
-
-            </div>
-
-
-            <!-- PROJECT 8 -->
-            <div class="project-card">
-
-                <div class="project-image-placeholder">
-                    📊
-                </div>
-
-                <div class="project-content">
-
-                    <h3>Data Analytics Dashboard</h3>
-
-                    <p>
-                        Interactive dashboard for visualizing business
-                        KPIs, trends and analytical insights.
-                    </p>
-
-                    <a href="#" class="btn primary">
-                        View Project
-                    </a>
-
-                </div>
-
-            </div>
-
-
-            <!-- PROJECT 9 -->
-            <div class="project-card">
-
-                <div class="project-image-placeholder">
-                    🤖
-                </div>
-
-                <div class="project-content">
-
-                    <h3>AI Chatbot</h3>
-
-                    <p>
-                        AI-powered chatbot designed to answer user
-                        questions using natural language processing.
-                    </p>
-
-                    <a href="#" class="btn primary">
-                        View Project
-                    </a>
-
-                </div>
-
-            </div>
-
-
-            <!-- PROJECT 10 -->
-            <div class="project-card">
-
-                <div class="project-image-placeholder">
-                    🏠
-                </div>
-
-                <div class="project-content">
-
-                    <h3>House Price Prediction</h3>
-
-                    <p>
-                        Regression-based machine learning model for
-                        predicting residential property prices.
-                    </p>
-
-                    <a href="#" class="btn primary">
-                        View Project
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= EXPERIENCE ================= -->
-<section id="experience">
-
-    <div class="container">
-
-        <h2 class="section-title">
-            My <span>Experience</span>
-        </h2>
-
-
-        <div class="experience-card">
-
-            <h3>Data Scientist Intern</h3>
-
-            <h4>BCG Data Science Job Simulation · Forage</h4>
-
-            <span>May 2026 – Jun 2026 · Virtual</span>
-
-            <ul>
-                <li>Analyzed customer churn and business data.</li>
-                <li>Performed feature engineering using Pandas and NumPy.</li>
-                <li>Developed executive insights and retention strategies.</li>
-                <li>Identified important business KPIs.</li>
-            </ul>
-
-            <a href="#" class="btn primary">
-                View Certificate
+            <a href="https://github.com/Satya-789"
+               target="_blank"
+               rel="noopener noreferrer">
+                GitHub
             </a>
 
-        </div>
+            <a href="https://www.linkedin.com/in/satya-prakash-mohanty/"
+               target="_blank"
+               rel="noopener noreferrer">
+                LinkedIn
+            </a>
 
-
-        <div class="experience-card">
-
-            <h3>Data Scientist Intern</h3>
-
-            <h4>AtliQ Technologies</h4>
-
-            <span>Aug 2025 – Sep 2025 · Virtual</span>
-
-            <ul>
-                <li>Cleaned and preprocessed datasets.</li>
-                <li>Performed domain-driven feature engineering.</li>
-                <li>Improved model accuracy by approximately 12%.</li>
-                <li>Built and deployed a Streamlit ML application.</li>
-                <li>Used GitHub workflows for project development.</li>
-            </ul>
-
-            <a href="#" class="btn primary">
-                View Certificate
+            <a href="mailto:satyaprakash.mohanty393@gmail.com">
+                Email
             </a>
 
         </div>
 
     </div>
 
-</section>
 
+    <div class="copyright">
 
-<!-- ================= CERTIFICATES ================= -->
-<section id="certificates">
-
-    <div class="container">
-
-        <h2 class="section-title">
-            My <span>Certificates</span>
-        </h2>
-
-        <div class="certificate-grid">
-
-            <div class="certificate-card">
-                <h3>Math and Statistics For AI, Data Science</h3>
-                <p>Codebasics</p>
-                <a href="#" class="btn primary">View Certificate</a>
-            </div>
-
-            <div class="certificate-card">
-                <h3>Gen AI to Agentic AI with Business Projects</h3>
-                <p>Codebasics</p>
-                <a href="#" class="btn primary">View Certificate</a>
-            </div>
-
-            <div class="certificate-card">
-                <h3>Natural Language Processing</h3>
-                <p>Codebasics</p>
-                <a href="#" class="btn primary">View Certificate</a>
-            </div>
-
-            <div class="certificate-card">
-                <h3>Master Machine Learning for Data Science & AI</h3>
-                <p>Codebasics</p>
-                <a href="#" class="btn primary">View Certificate</a>
-            </div>
-
-            <div class="certificate-card">
-                <h3>Deep Learning: Beginner to Advanced</h3>
-                <p>Codebasics</p>
-                <a href="#" class="btn primary">View Certificate</a>
-            </div>
-
-            <div class="certificate-card">
-                <h3>Data Science Foundation Bootcamp</h3>
-                <p>Codebasics</p>
-                <a href="#" class="btn primary">View Certificate</a>
-            </div>
-
-            <div class="certificate-card">
-                <h3>IBM Data Science</h3>
-                <p>IBM</p>
-                <a href="#" class="btn primary">View Certificate</a>
-            </div>
-
-        </div>
+        <p>
+            © 2026 Satya Prakash Mohanty. All Rights Reserved.
+        </p>
 
     </div>
-
-</section>
-
-
-<!-- ================= RESUME PDF ================= -->
-<section id="resume">
-
-    <div class="container">
-
-        <h2 class="section-title">
-            My <span>Resume</span>
-        </h2>
-
-        <div class="resume-box">
-
-            <div class="resume-icon">
-                📄
-            </div>
-
-            <h3>Download My Resume</h3>
-
-            <p>
-                View or download my complete resume in PDF format.
-            </p>
-
-            <div class="resume-buttons">
-
-                <!-- Put your PDF file in the same folder -->
-                <a href="resume.pdf"
-                   target="_blank"
-                   class="btn primary">
-                    View Resume
-                </a>
-
-                <a href="resume.pdf"
-                   download
-                   class="btn secondary">
-                    Download PDF
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= CONTACT ================= -->
-<section id="contact">
-
-    <div class="container">
-
-        <h2 class="section-title">
-            Contact <span>Me</span>
-        </h2>
-
-        <div class="contact-box">
-
-            <p>
-                Interested in working together or discussing a project?
-            </p>
-
-            <a
-                href="mailto:satyaprakash.mohanty393@gmail.com"
-                class="btn primary">
-                Email Me
-            </a>
-
-            <p>
-                📞 +91 9668234042
-            </p>
-
-            <p>
-                ✉️ satyaprakash.mohanty393@gmail.com
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= FOOTER ================= -->
-<footer>
-
-    <p>
-        © 2026 Satya Prakash Mohanty. All Rights Reserved.
-    </p>
 
 </footer>
 
+
+<!-- =====================================================
+     MOBILE NAVIGATION SCRIPT
+===================================================== -->
+
+<script>
+
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    menuToggle.addEventListener("click", () => {
+
+        navLinks.classList.toggle("active");
+
+        const isOpen =
+            navLinks.classList.contains("active");
+
+        menuToggle.setAttribute(
+            "aria-expanded",
+            isOpen
+        );
+
+        menuToggle.textContent =
+            isOpen ? "✕" : "☰";
+
+    });
+
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            navLinks.classList.remove("active");
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+            menuToggle.textContent = "☰";
+
+        });
+
+    });
+
+</script>
+
+</body>
+</html>
+```
