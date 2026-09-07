@@ -69,6 +69,7 @@ header {
 .nav-links a {
     color: #cbd5e1;
     font-size: 14px;
+    transition: 0.3s;
 }
 
 .nav-links a:hover {
@@ -132,6 +133,9 @@ header {
     border-radius: 50%;
 
     border: 5px solid #a78bfa;
+
+    display: block;
+    margin: auto;
 }
 
 .hero-buttons {
@@ -229,6 +233,13 @@ header {
     border-radius: 8px;
 
     color: #cbd5e1;
+
+    transition: 0.3s;
+}
+
+.skill:hover {
+    border-color: #7c3aed;
+    transform: translateY(-3px);
 }
 
 
@@ -253,6 +264,9 @@ header {
     overflow: hidden;
 
     transition: 0.3s;
+
+    display: flex;
+    flex-direction: column;
 }
 
 .project-card:hover {
@@ -261,15 +275,34 @@ header {
     border-color: #7c3aed;
 }
 
+
+/* ================= PROJECT IMAGES ================= */
+
+/*
+    All project images will have the same
+    image container height.
+
+    object-fit: contain ensures the COMPLETE
+    image remains visible without distortion.
+*/
+
 .project-card img {
     width: 100%;
-
     height: 230px;
 
-    object-fit: cover;
+    object-fit: contain;
+    object-position: center;
+
+    display: block;
+
+    background: #172033;
 }
 
+
+/* ================= PROJECT PLACEHOLDER ================= */
+
 .project-image-placeholder {
+    width: 100%;
     height: 230px;
 
     display: flex;
@@ -283,8 +316,16 @@ header {
     background: #172033;
 }
 
+
+/* ================= PROJECT CONTENT ================= */
+
 .project-content {
     padding: 25px;
+
+    display: flex;
+    flex-direction: column;
+
+    flex: 1;
 }
 
 .project-content h3 {
@@ -295,6 +336,12 @@ header {
     color: #94a3b8;
 
     margin-bottom: 20px;
+
+    flex: 1;
+}
+
+.project-content .btn {
+    align-self: flex-start;
 }
 
 
@@ -352,6 +399,14 @@ header {
     padding: 25px;
 
     border-radius: 10px;
+
+    transition: 0.3s;
+}
+
+.certificate-card:hover {
+    transform: translateY(-4px);
+
+    border-color: #7c3aed;
 }
 
 .certificate-card h3 {
@@ -426,13 +481,19 @@ header {
 
     height: 230px;
 
-    object-fit: cover;
+    object-fit: contain;
+
+    object-position: center;
+
+    background: #172033;
 
     border-radius: 10px;
 
     border: 1px solid #334155;
 
     transition: 0.3s;
+
+    display: block;
 }
 
 .image-gallery img:hover {
@@ -476,7 +537,7 @@ footer {
 }
 
 
-/* ================= MOBILE ================= */
+/* ================= TABLET ================= */
 
 @media (max-width: 900px) {
 
@@ -498,6 +559,11 @@ footer {
         font-size: 38px;
     }
 
+    .hero p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .skills-grid {
         grid-template-columns:
             repeat(2, 1fr);
@@ -514,6 +580,8 @@ footer {
     }
 }
 
+
+/* ================= MOBILE ================= */
 
 @media (max-width: 650px) {
 
@@ -559,5 +627,40 @@ footer {
         width: 220px;
         height: 220px;
     }
+
+    .project-card img,
+    .project-image-placeholder {
+        height: 200px;
+    }
+}
+
+
+/* ================= SMALL MOBILE ================= */
+
+@media (max-width: 400px) {
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero h2 {
+        font-size: 18px;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    .project-content {
+        padding: 20px;
+    }
+
+    .project-card img,
+    .project-image-placeholder {
+        height: 180px;
+    }
 }
 ```
+
+
+
